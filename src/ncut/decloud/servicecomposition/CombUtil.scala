@@ -252,9 +252,6 @@ object CombUtil {
     }
   }
 
-
-
-
   /**
     * print the executable equal service composition on console
     * @param q an equal executable plan
@@ -319,20 +316,4 @@ object CombUtil {
     println(min + "min " + s + "s " + ms + "ms ")
     (min*60+s)*1000 + ms
   }
-
-//  /**
-//    * 打印消耗的时间：基于一个时间段
-//    * @return
-//    */
-//  def printTimeCost(between:Long): Long ={
-//    //    val between = endtime.getTime - starttime.getTime
-//    val day = between / (24 * 60 * 60 * 1000)
-//    val hour = between / (60 * 60 * 1000) - day * 24
-//    val min = (between / (60 * 1000)) - day * 24 * 60 - hour * 60
-//    val s = between / 1000 - day * 24 * 60 * 60 - hour * 60 * 60 - min * 60
-//    val ms = between - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000 - min * 60 * 1000 - s * 1000
-//    println("Time cost is : " + min + "分" + s + "秒" + ms + "毫秒")
-//    s*1000 + ms
-//  }
-
 }
