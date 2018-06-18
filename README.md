@@ -65,10 +65,10 @@ val simulSource:Array[QueryService] = Array[QueryService](Movie,Revenues,Directo
 val simulServices:List[QueryService] = SourceSImulation.geneViews(DataUtil.simulSource,query,1000)
 ```
 ### Using SMinicon algorithm
-Besides the SBucket algorithm used in the above, you can choose SMinicon algorithm which is more efficient by replacing the `SBucket.scala` with `SMinicon.scala` in **Step 4**, in addition, if we wanna to use the simulated sevice source, we need to assign the `Datautil.simulServices` to the variable `services` in **Step 4**:
+Besides the SBucket algorithm used in the above, you can choose SMinicon algorithm which is more efficient by replacing the `SBucket.scala` with `SMinicon.scala` in **Step 4**, the result display will be a little different from SBucket:<br>
+![Image text](https://raw.githubusercontent.com/declouddataservice/servicecomposition/master/imgs/minicon.png)
+Note that the bucket elements are invalid, while adding the SMCD information on console.<br>
+In addition, if we wanna to use the simulated sevice source, we need to assign the `Datautil.simulServices` to the variable `services` in **Step 4**:
 ```scala
 val services = DataUtil.simulServices.toSet
 ```
-and the result display will be a little different from SBucket:<br>
-![Image text](https://raw.githubusercontent.com/declouddataservice/servicecomposition/master/imgs/minicon.png)
-Note that the bucket elements are invalid, while adding the SMCD information on console.
